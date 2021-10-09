@@ -1,69 +1,38 @@
-# jiaj-blog-web1.0
+# 个人博客
+- 前后端分离 spring boot + nuxtjs + vue-element-admin
+- 地址：http://110.40.140.27/ ❤喜欢就给个star吧，校招加点分,嘻嘻嘻~
+## 前端
+- nuxtjs 
+- tailwindcss
+- gitalk
+前端界面参考大佬bennyxguo的项目
+https://github.com/auroral-ui/hexo-theme-aurora
+### PC端部分效果图
+![image](https://user-images.githubusercontent.com/48440578/136645474-d33d77d7-91a2-425d-b423-b13eb05d30ba.png)
+![image](https://user-images.githubusercontent.com/48440578/136645485-a8cb2f2b-4c21-42dc-b927-6ec9afe59150.png)
+### 移动端部分效果图
+![image](https://user-images.githubusercontent.com/48440578/136645535-08581d92-f47c-4644-9af7-246d5c4f58e2.png)
+![image](https://user-images.githubusercontent.com/48440578/136645540-1e277e70-c02b-4249-a103-c34d028b92dc.png)
+## 后台管理
+- vue-element-admin
+- 官网地址 https://panjiachen.github.io/vue-element-admin-site/zh/
+### PC端后台管理部分效果图
+![image](https://user-images.githubusercontent.com/48440578/136645584-a6d80b41-9e1e-4f3f-8135-08411029bf9a.png)
+![image](https://user-images.githubusercontent.com/48440578/136645591-3f2b454f-e918-47bb-9cb4-e0045669c583.png)
 
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+## 后端
+- springboot2.5.4
+- mybatisplus3.4.3.2
+- swagger1.9.1.RELEASE
+- aliyunoss3.10.2
+- redis
+- security
+- druid
+- jdk11
 
 
-### `pages`
+# 前端界面参考大佬bennyxguo的开源项目
+https://github.com/auroral-ui/hexo-theme-aurora
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
 
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
