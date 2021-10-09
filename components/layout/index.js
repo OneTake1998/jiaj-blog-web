@@ -1,0 +1,5 @@
+export { default as Header } from './header/Header.vue'
+// export { default as Logo } from './header/Logo.vue'
+// export { default as Controls } from './header/Controls.vue'
+// export { default as Navigation } from './header/Navigation.vue'
+export { default as Footer } from './footer/Footer.vue'
