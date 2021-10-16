@@ -122,12 +122,7 @@ export default {
     this.$store.commit("SET_AVATAR", this.author.imageUrl);
     this.$store.commit("SET_NICKNAME", this.author.nickName);
   },
- 
-  mounted() {
-    // console.log("GithubAttributes:", GitalkModels.GithubAttributes);
-    // const gitalk = new Gitalk(GitalkModels.GithubAttributes);
-    // gitalk.render("gitalk-container");
-  },
+
   data() {
     return {
       expanderClass: {

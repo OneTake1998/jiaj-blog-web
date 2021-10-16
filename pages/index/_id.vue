@@ -1,11 +1,9 @@
 <template>
   <div>
     <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-      <template>
         <li v-for="post in articleList" :key="post.id">
           <Article :data="post" :showTab="false" />
         </li>
-      </template>
     </ul>
 
     <Paginator

@@ -46,12 +46,12 @@
           v-if="post.title"
           :to="{ name: 'post', params: { slug: post.slug } }"
         > -->
-        <nuxt-link :to="`/article/${data.id}`" target="_blank">
+        <nuxt-link :to="`/article/${data.id}`" >
           <h1 data-dia="article-link">{{ data.title }}</h1>
         </nuxt-link>
         <!-- </router-link> -->
         <p class="article-content-p">
-          {{ data.content }}
+          {{ data.content.substring(0,400)  }}
         </p>
 
         <div class="article-footer">
@@ -112,6 +112,7 @@ export default {
   display: -webkit-box;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
+  text-align: justify;
   max-height: 6 * 1.5em ;
 }
 </style>

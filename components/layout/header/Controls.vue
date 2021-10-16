@@ -18,6 +18,18 @@
       <svg-icon icon-class="music" />
       音乐
     </span>
+    <span class="ob-drop-shadow">
+      <audio
+        class="musicPlayer"
+        ref="musicPlayer"
+        v-show="false"
+        v-if="musicList.length > 0"
+        controls
+        autoplay="autoplay"
+        :src="musicList[currentMusic].url"
+        @ended="audioFinished"
+      />
+    </span>
     <span no-hover-effect class="ob-drop-shadow" data-dia="light-switch">
       <ThemeToggle />
     </span>
@@ -36,18 +48,27 @@ export default {
     return {
       currentMusic: 0,
       musicList: [],
-      music: null,
+      isPlayer: true,
     };
   },
 
-  mounted() {},
+  mounted() {
+    this.$getMusic().then((res) => {
+      this.musicList = res.data;
+    });
+  },
   methods: {
     handleOpenModal() {
       this.$store.commit("search/SET_OPNEMODAL", true);
     },
     handleOpenMusic() {
-      alert("开发中");
-      // this.$store.commit("music/SET_MUSIC_OPNEMODAL", true);
+      if (this.isPlayer) {
+        this.$refs.musicPlayer.pause();
+        this.isPlayer = false;
+      } else {
+        this.isPlayer = true;
+        this.$refs.musicPlayer.play();
+      }
     },
     audioFinished() {
       if (this.currentMusic < this.musicList.length - 1) {
@@ -63,6 +84,12 @@ export default {
 
 <style lang="scss" scoped>
 .header-controls {
+  .music-player {
+    height: 22px;
+    width: 250px;
+    color: red;
+    font-size: 12px;
+  }
   span {
     display: flex;
     justify-content: center;

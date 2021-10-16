@@ -20,25 +20,25 @@ export default {
   },
   loading: { color: '#fff' },
   //axios
-  axios: {
-    baseUrl: "//110.40.140.27:8001"
-    // baseUrl: "//localhost:8001"
-  },
-  // axios
   // axios: {
-  //   proxy: true, //开启代理转发
-  //   prefix: "/api" // 请求接口添加前缀 /api   /test > /api/test
+  //   baseUrl: "//110.40.140.27:8001"
+  //   // baseUrl: "//localhost:8001"
   // },
+  // axios
+  axios: {
+    proxy: true, //开启代理转发
+    prefix: "/api" // 请求接口添加前缀 /api   /test > /api/test
+  },
 
-  // proxy: {
-  //   // 代理转发
-  //   "/api": {
-  //     // /api/test > http://mengxuegu.com:7300/mock/5ee6e6a9e56c02034c4c2e89/blog-web/test
-  //     // target: "http://110.40.140.27:8001",
-  //     target: "http://localhost:8001",
-  //     pathRewrite: { "^/api": "" }
-  //   }
-  // },
+  proxy: {
+    // 代理转发
+    "/api": {
+      // /api/test > http://mengxuegu.com:7300/mock/5ee6e6a9e56c02034c4c2e89/blog-web/test
+      // target: "http://110.40.140.27:8001",
+      target: "https://api.jiajin.info",
+      pathRewrite: { "^/api": "" }
+    }
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     "~assets/css/index.scss",

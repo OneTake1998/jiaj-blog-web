@@ -1,5 +1,5 @@
 <template>
-  <li class="article-container">
+  <div class="article-container">
     <span class="article-tag" v-show="showTab">
       <b>
         <svg-icon icon-class="hot" />
@@ -31,15 +31,20 @@
           </ul>
         </span>
 
-        <nuxt-link :to="`/article/${data.id}`" target="_blank">
+        <nuxt-link :to="`/article/${data.id}`">
           <h1 data-dia="article-link">{{ data.title }}</h1>
         </nuxt-link>
 
-        <p v-if="data.content" class="article-content-p">{{ data.content }}</p>
+        <p v-if="data.content" class="article-content-p">
+          {{ data.content.substring(0, 200) }}
+        </p>
 
         <div class="article-footer">
           <div class="flex flex-row items-center">
-            <img class="hover:opacity-50 cursor-pointer" :src="data.userImage" />
+            <img
+              class="hover:opacity-50 cursor-pointer"
+              :src="data.userImage"
+            />
             <span class="text-ob-dim">
               <strong
                 class="
@@ -61,7 +66,7 @@
         </div>
       </div>
     </div>
-  </li>
+  </div>
 </template>
 
 <script >
@@ -103,11 +108,12 @@ export default {
   margin: 0.25rem;
 }
 .article-content-p {
+  text-align: justify;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  max-height: 3 * 1.5em;
+  max-height: 3 * 1.5em ;
 }
 </style>

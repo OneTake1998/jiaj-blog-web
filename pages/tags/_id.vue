@@ -63,7 +63,6 @@ export default {
     const query = { current: 1, size: 3, labelId: params.id };
     //1、查询文章
     const { data } = await app.$getArticleList(query);
-    console.log("文章数据", data);
     //分页对象
     let pagination = {
       pageSize: data.size,

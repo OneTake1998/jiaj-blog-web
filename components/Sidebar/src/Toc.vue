@@ -84,7 +84,7 @@ export default {
           templateDir.appendChild(templateLi);
           preDom = templateLi;
           preFlag = el.tagName;
-        } else if (curFlag === "H2" && preFlag === "H1") {
+        } else if (curFlag === "H2" && preFlag === "H1" || curFlag === "H2" && preFlag === "H2") {
           if (preFlag != curFlag) {
             var childrenH2 = document.createElement("ol");
             childrenH2.setAttribute("class", "toc-child");
@@ -97,7 +97,7 @@ export default {
             preDom = templateLi;
             preFlag = el.tagName;
           }
-        } else if (curFlag === "H3" && preFlag === "H2") {
+        } else if (curFlag === "H3" && preFlag === "H2" || curFlag === "H3" && preFlag === "H3") {
           if (preFlag != curFlag) {
             var childrenH3 = document.createElement("ol");
             childrenH3.setAttribute("class", "toc-child");
