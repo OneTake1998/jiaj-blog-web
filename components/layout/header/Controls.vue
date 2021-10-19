@@ -16,16 +16,16 @@
       @click="handleOpenMusic(true)"
     >
       <svg-icon icon-class="music" />
-      音乐
+      {{ isPlayer ? "ON" : "OFF" }}
     </span>
     <span class="ob-drop-shadow">
       <audio
+        id="musicPlayer"
         class="musicPlayer"
         ref="musicPlayer"
         v-show="false"
-        v-if="musicList.length > 0"
         controls
-        autoplay="autoplay"
+        v-if="musicList.length > 0"
         :src="musicList[currentMusic].url"
         @ended="audioFinished"
       />
@@ -48,11 +48,10 @@ export default {
     return {
       currentMusic: 0,
       musicList: [],
-      isPlayer: true,
+      isPlayer: false,
     };
   },
-
-  mounted() {
+  created() {
     this.$getMusic().then((res) => {
       this.musicList = res.data;
     });
@@ -62,6 +61,7 @@ export default {
       this.$store.commit("search/SET_OPNEMODAL", true);
     },
     handleOpenMusic() {
+      console.log("handleOpenMusic:", this.$refs.musicPlayer);
       if (this.isPlayer) {
         this.$refs.musicPlayer.pause();
         this.isPlayer = false;
@@ -78,7 +78,11 @@ export default {
       }
     },
   },
-  computed: {},
+  computed: {
+    // isPlayer() {
+    //   return this.$refs.musicPlayer.paused;
+    // },
+  },
 };
 </script>
 

@@ -60,7 +60,7 @@
                 {{ data.nickName }}
               </strong>
 
-              {{ getDateFormat(data.updateDate) }}
+              {{ getDateFormat(data.createDate) }}
             </span>
           </div>
         </div>

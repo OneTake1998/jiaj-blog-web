@@ -5,7 +5,8 @@ const state = () => ({
   avatar:"",
   nickname:"",
   //默认夜间模式
-  theme: "theme-dark",
+  // theme-dark theme-light
+  theme: "theme-light",
   statistic: new Statistic(),
   themeConfig:new ThemeConfig()
 });

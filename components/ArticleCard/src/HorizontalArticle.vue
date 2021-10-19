@@ -72,7 +72,7 @@
               >
                 {{ data.nickName }}
               </strong>
-              发布于 {{ getDateFormat(data.updateDate) }}
+              发布于 {{ getDateFormat(data.createDate) }}
             </span>
           </div>
         </div>
