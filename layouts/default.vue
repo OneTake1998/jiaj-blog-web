@@ -33,6 +33,7 @@
         <MobileMenu />
       </div>
     </div>
+    <Dia v-if="!isMobile" />
   </div>
 </template>
 
@@ -43,6 +44,7 @@ import { Header, Footer } from "@/components/layout";
 import SearchModal from "@/components/SearchModal";
 import MobileMenu from "@/components/MobileMenu";
 import Navigator from "@/components/Navigator";
+import Dia from "@/components/Dia.vue";
 export default {
   components: {
     Header,
@@ -50,6 +52,7 @@ export default {
     SearchModal,
     MobileMenu,
     Navigator,
+    Dia,
   },
   data() {
     return {

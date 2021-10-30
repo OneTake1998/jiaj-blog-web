@@ -36,7 +36,7 @@
         </nuxt-link>
 
         <p v-if="data.content" class="article-content-p">
-          {{ data.content.substring(0, 200) }}
+          {{ data.content.substring(0, 51) }}...
         </p>
 
         <div class="article-footer">
@@ -109,11 +109,11 @@ export default {
 }
 .article-content-p {
   text-align: justify;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  max-height: 3 * 1.5em ;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+  // display: -webkit-box;
+  // -webkit-line-clamp: 3;
+  // -webkit-box-orient: vertical;
+  // max-height: 3 * 1.5em ;
 }
 </style>

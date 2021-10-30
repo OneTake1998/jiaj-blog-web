@@ -6,7 +6,7 @@ const state = () => ({
   nickname:"",
   //默认夜间模式
   // theme-dark theme-light
-  theme: "theme-light",
+  theme: "theme-dark",
   statistic: new Statistic(),
   themeConfig:new ThemeConfig()
 });

@@ -46,12 +46,12 @@
           v-if="post.title"
           :to="{ name: 'post', params: { slug: post.slug } }"
         > -->
-        <nuxt-link :to="`/article/${data.id}`" >
+        <nuxt-link :to="`/article/${data.id}`">
           <h1 data-dia="article-link">{{ data.title }}</h1>
         </nuxt-link>
         <!-- </router-link> -->
         <p class="article-content-p">
-          {{ data.content.substring(0,400)  }}
+          {{ data.content.substring(0, 80) }}...
         </p>
 
         <div class="article-footer">
@@ -65,8 +65,7 @@
                 class="
                   text-ob-normal
                   pr-1.5
-                  hover:text-ob
-                  hover:opacity-50
+                  hover:text-ob hover:opacity-50
                   cursor-pointer
                 "
               >
@@ -107,12 +106,13 @@ export default {
 
 <style lang="scss" scoped>
 .article-content-p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
   text-align: justify;
-  max-height: 6 * 1.5em ;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+  // display: -webkit-box;
+  // -webkit-line-clamp: 6;
+  // -webkit-box-orient: vertical;
+
+  // max-height: 6 * 1.5em ;
 }
 </style>
