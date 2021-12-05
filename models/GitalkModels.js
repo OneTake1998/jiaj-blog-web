@@ -4,9 +4,9 @@ const GithubAttributes = {
       /** Github username */
       owner: "OneTake1998",
       /** Github app client id */
-      clientID: "e7948dd5120f7ef846e1",
+      clientID: "输入你的clientID",
       /** Github app client secret */
-      clientSecret: "3cce8ad45e750ece336ce0cede542b53cdbf5d43",
+      clientSecret: "输入你的clientSecret",
       /** Github app admin username */
       admin: "OneTake1998"
 }
