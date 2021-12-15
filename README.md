@@ -1,6 +1,6 @@
 # 个人博客
 - 前后端分离 spring boot + nuxtjs + vue-element-admin
-- 地址：http://110.40.140.27/ ❤喜欢就给个star吧，校招加点分,嘻嘻嘻~
+- 地址：https://jiajin.info/ ❤喜欢就给个star吧，校招加点分,嘻嘻嘻~
 ## 前端
 - nuxtjs 
 - tailwindcss
