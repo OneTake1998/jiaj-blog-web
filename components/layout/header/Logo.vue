@@ -13,7 +13,7 @@
       "
       @click="handleLogoClick"
     >
-      <span class="flex text-4xl"> 公考威龙  </span>
+      <span class="flex text-4xl"> 快乐码男  </span>
       <span class="font-extrabold text-xs uppercase">
         <!-- {{ themeConfig.site.nick || 'BLOG' }} -->
         BLOG

@@ -34,8 +34,8 @@ export default {
     // 代理转发
     "/api": {
       // /api/test > http://mengxuegu.com:7300/mock/5ee6e6a9e56c02034c4c2e89/blog-web/test
+      // target: "http://123.249.8.67:9001",
       target: "http://localhost:9001",
-      // target: "https://api.jiajin.info",
       pathRewrite: { "^/api": "" }
     }
   },
